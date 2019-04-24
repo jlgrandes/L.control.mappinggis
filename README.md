@@ -5,7 +5,8 @@ Using the Control Mappinggis
 
 Insert the following line:
 
-...
+
 L.control.mappinggis({ position: 'options' }).addTo(map);
-...
+
+
 options: 'topleft', 'topright', 'bottomleft' or 'bottomright'
