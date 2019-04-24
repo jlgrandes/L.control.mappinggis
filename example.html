@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Example L.control.mappinggis</title>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+	<style>
+	 body {
+	    	padding: 0;
+	    	margin: 0;
+		}
+		html, body, #map {
+    		height: 100%;
+		}
+	</style>
+</head>
+<body>
+ <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+   <script src="mappingGIS_icon.js" type="text/javascript"></script>
+
+<div id ="map"> </div>
+<script>
+var map = L.map('map', {center: [41.650 ,-4.710],zoom: 14});
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+//'topleft', 'topright', 'bottomleft' or 'bottomright'
+L.control.mappinggis({ position: 'bottomleft' }).addTo(map);
+</script>
+</body>
+</html>
